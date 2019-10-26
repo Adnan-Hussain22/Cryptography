@@ -1,2 +1,2 @@
 # Cryptography
-This repository contains the work which i learned during learning cyptography in university
+This repository contains the work related to different algorithms of cryptography which i have learned during the course of crytography in university life
