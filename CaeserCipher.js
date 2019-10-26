@@ -44,11 +44,15 @@ const decrypt = (cipher, key) => {
 		if (!isAlphabet(ascii)) return value;
 		if (checkCase(ascii) === 'upper-case') {
 			const num = getNum(ascii);
-			const textNum = (num - key) % 26;
+			const cal = num - key;
+			let textNum = cal < 0 ? cal + 26 : cal;
+			textNum = textNum % 26;
 			textChar = textNum + 65;
 		} else if (checkCase(ascii) === 'lower-case') {
 			const num = getNum(ascii);
-			const textNum = (num - key) % 26;
+			const cal = num - key;
+			let textNum = cal < 0 ? cal + 26 : cal;
+			textNum = textNum % 26;
 			textChar = textNum + 97;
 		}
 		return String.fromCharCode(textChar);
